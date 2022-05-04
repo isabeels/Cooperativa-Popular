@@ -1,0 +1,8 @@
+body {
+    color:red;
+    font-size:12px;
+}
+div {
+    border-top-width: 20px;
+    margin-top:40px;
+}
