@@ -6,6 +6,14 @@ button:hover {
     background-color: rgba(255, 0, 0, 0.15);
 }
 
+body {
+    background-color: #46244C !important;
+}
+
+.card {
+    background-color: #d3d3d3d2 !important;
+}
+
 #posicionamento-relativo {
     display: flex;
     justify-content: center;
