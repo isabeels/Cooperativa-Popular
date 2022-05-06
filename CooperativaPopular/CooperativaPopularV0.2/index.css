@@ -1,0 +1,18 @@
+a {
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.15);
+}
+
+#posicionamento-relativo {
+    display: flex;
+    justify-content: center;
+}
+
+#button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
