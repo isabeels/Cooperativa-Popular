@@ -2,25 +2,63 @@ a {
     color: #fff;
 }
 
-button:hover {
-    background-color: rgba(255, 0, 0, 0.15);
-}
-
 body {
     background-color: #46244C !important;
 }
 
 .card {
     background-color: #d3d3d3d2 !important;
+    border-color:#46244C !important;
+    
 }
 
+
+.card-title {
+   text-align: center; 
+}
+
+.card-text {
+    text-align: center;
+}
 #posicionamento-relativo {
     display: flex;
     justify-content: center;
+    padding-top: 2%;
+    
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+ flex-direction: column;
 }
 
 #button {
     display: flex;
     justify-content: space-evenly;
 }
+
+#posicionamento-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 2%;
+    
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5%;
+}
+
+#rangeSlider {
+    color: #fff;
+}
+
+#slider {
+    color: #fff;
+    background-color:#46244C !important;
+    border-color: #80448b;
+}
+
 

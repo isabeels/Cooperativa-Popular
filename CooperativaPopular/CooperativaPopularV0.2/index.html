@@ -10,6 +10,7 @@
     
 </head>
 <body>
+  
   <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #ebebeb;">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
@@ -48,7 +49,14 @@
     </div>
   </nav>
     <div id="posicionamento-relativo"></div>
-    <script src="index.js"></script>
     
+    <script src="index.js"></script>
+    <div id="posicionamento-slider">
+      <label for="rangeSlider"><input type="range" min='1' max="10" step="1" value="5" id="rangeSlider"  >
+        </label>
+      
+        <button class="btn btn-primary" id="slider" onclick="reset()">Ajustar quantidade e recarregar</button>
+
+    </div>
 </body>
 </html>

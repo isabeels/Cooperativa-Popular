@@ -1,6 +1,8 @@
 if(localStorage.getItem('clientFile.json')!=null){
     makePosts(JSON.parse(localStorage.getItem('clientFile.json')));
     //makeButton();
+    console.log(JSON.parse(localStorage.getItem('clientFile.json')));
+    //setSizeButton();
 }else{
     fetch('https://randomuser.me/api/?results=5').then(data => {
         return data.json();
@@ -9,11 +11,45 @@ if(localStorage.getItem('clientFile.json')!=null){
         console.log(post);
         makePosts(post);
         localStorage.setItem('clientFile.json', JSON.stringify(post));
-        //makeButton();
+        //setSizeButton();
     });
 }
 
+/*  function setSizeButton(){
+    let div = document.getElementById("posicionamento-slider");
+    // let rangeSlider = document.createElement('input');
+    // rangeSlider.setAttribute('type','range');
+    // rangeSlider.setAttribute('min', '1');
+    // rangeSlider.setAttribute('max', '10');
+    // rangeSlider.setAttribute('step', '1');
+    // rangeSlider.setAttribute('value', '5');
+    // rangeSlider.setAttribute('id','rangeSlider');
+// 
+    // let button = document.createElement('button');
+    // button.setAttribute('class', 'btn btn-primary');
+    // button.style.backgroundColor = '#40026C';
+    // button.style.color = '#fff';
+    // button.innerHTML = 'Recarregar';
+    // button.setAttribute('onclick', 'reset()');
+//    
+    // div.appendChild(rangeSlider);
+    // div.appendChild(button);
+}*/
 
+function reset(){
+    let value = document.getElementById('rangeSlider').value;
+    fetch('https://randomuser.me/api/?results='+value).then(data => {
+        return data.json();
+    })
+    .then(post => {
+        localStorage.setItem('clientFile.json', JSON.stringify(post));
+        document.location.reload(true);
+    });
+}
+
+function reloadNoClear(){
+    document.location.reload(true);
+}
 
 function reload(){
     localStorage.clear();
@@ -21,7 +57,7 @@ function reload(){
 }
 
 function makePosts(post) {
-    for(i=0;i<5;i++){
+    for(i=0;i<post.results.length;i++) {
         const div = document.getElementById("posicionamento-relativo");
         const e = document.createElement('div');
         
@@ -64,12 +100,15 @@ function makePosts(post) {
                 button.setAttribute('href','clienteCinco.html');
                 break;
         }
-        
+        const buttonDiv = document.createElement('div');
+        buttonDiv.setAttribute('id', 'buttonDiv');
+
         button.setAttribute('class','btn btn-primary');
         button.style.backgroundColor = '#40026C';
         button.style.color = '#fff';
         button.innerHTML = 'Clique em mim';
         
+        buttonDiv.appendChild(button);
     
         e.appendChild(img);
     
@@ -77,7 +116,7 @@ function makePosts(post) {
         bd.appendChild(email);
         bd.appendChild(telefone);
         bd.appendChild(location);
-        bd.appendChild(button);
+        bd.appendChild(buttonDiv);
     
         e.appendChild(bd);
         div.appendChild(e);
