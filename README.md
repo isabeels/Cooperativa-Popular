@@ -11,10 +11,6 @@
   </a>
   <a href="">
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"  alt="Javascript" />
-  </a>
-   <a href="">
-    <img src="https://img.shields.io/badge/Unsplash-000000?style=for-the-badge&logo=Unsplash&logoColor=white"  alt="Unsplash" />
-  </a>
    <a href="">
     <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"  alt="Bootstrap" />
   </a>
@@ -25,6 +21,11 @@
   
 ### Sobre
 Este projeto é a avaliação final da disciplina de Front-end Essencial do SERRATEC. O objetivo do projeto é criar um website para uma empresa especializada em ajudar pessoas desempregadas a conseguir emprego. O setor de contratação pediu uma página onde seja possível ver as últimas 5 pessoas que se cadastraram. O pessoal do backend já desenvolveu a api e a url para acessar é "https://randomuser.me/api/?results=5". 
+
+### Prévia
+
+![Cooperativa_Popular_-_Devs6_-_Pessoal_—_Microsoft__Edge_2022-06-05_20-45-09_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/101607831/172083767-7204e6c9-a80b-4453-9d63-bc9fc83cb43d.gif)
+
 
 ### ✔️ Requisitos
 
